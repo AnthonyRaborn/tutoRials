@@ -2,9 +2,10 @@
 title: 'Mini-Tutorial for RPushbullet'
 subtitle: 'How to Set Up Remote Error Catching with R Scripts'
 author: 'Anthony Raborn, Univeristy of Florida'
-date: '`r format(Sys.Date(), "%B %d, %Y")`'
 output: rmarkdown::github_document
 ---
+
+#### Last updated on `r format(Sys.Date(), "%B %d, %Y")`.
 
 # R Script for installing/using RPushbullet
 

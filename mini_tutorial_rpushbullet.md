@@ -1,7 +1,8 @@
 Mini-Tutorial for RPushbullet
 ================
 Anthony Raborn, Univeristy of Florida
-October 12, 2018
+
+#### Last updated on October 12, 2018.
 
 # R Script for installing/using RPushbullet
 
