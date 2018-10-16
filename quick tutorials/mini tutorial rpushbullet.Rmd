@@ -2,7 +2,10 @@
 title: 'Mini-Tutorial for RPushbullet'
 subtitle: 'How to Set Up Remote Error Catching with R Scripts'
 author: 'Anthony Raborn, Univeristy of Florida'
-output: rmarkdown::github_document
+output:
+  md_document:
+    variant: markdown_github 
+    toc: true
 ---
 
 #### Last updated on `r format(Sys.Date(), "%B %d, %Y")`.

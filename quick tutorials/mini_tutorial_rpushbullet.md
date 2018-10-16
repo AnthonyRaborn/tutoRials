@@ -1,10 +1,21 @@
-Mini-Tutorial for RPushbullet
-================
-Anthony Raborn, Univeristy of Florida
+-   [Last updated on October
+    15, 2018.](#last-updated-on-october-15-2018.)
+-   [R Script for installing/using
+    RPushbullet](#r-script-for-installingusing-rpushbullet)
+    -   [Ensuring RPushbullet is
+        installed](#ensuring-rpushbullet-is-installed)
+    -   [Creating an error catch function with
+        RPushbullet](#creating-an-error-catch-function-with-rpushbullet)
+    -   [Setting checkpoints with
+        RPushbullet](#setting-checkpoints-with-rpushbullet)
+    -   [Conclusion](#conclusion)
+-   [Copy of Code to Include in the Beginning of your R
+    Scripts](#copy-of-code-to-include-in-the-beginning-of-your-r-scripts)
 
 #### Last updated on October 15, 2018.
 
-# R Script for installing/using RPushbullet
+R Script for installing/using RPushbullet
+=========================================
 
 Pushbullet is an application designed to share notifications between
 your work environments. There are many potential uses for Pushbullet,
@@ -24,8 +35,8 @@ the script, it will completely stop running the script. If you’re
 watching all of the computers running your scripts in real time, this
 probably isn’t too much of a problem. I tend to try getting my
 simulation scripts running over the weekend so that they would be
-complete (hopefully\!) by the time I came back on Monday. This works
-well when you’re using well-written code that is robust within your
+complete (hopefully!) by the time I came back on Monday. This works well
+when you’re using well-written code that is robust within your
 simulation, but when you write your own novel functions regularly
 mistakes can happen (and happen quite often if you’re like me).
 
@@ -39,14 +50,15 @@ time from something entirely outside of your R code.
 My solution? Use the [Pushbullet app](www.pushbullet.com) in conjunction
 with the [RPushbullet
 package](https://github.com/eddelbuettel/rpushbullet) to let my scripts
-“ping” me on all my devices for certain milestones in my
-scripts–errors, “checkpoints,” and script completion in particular\!
+“ping” me on all my devices for certain milestones in my scripts–errors,
+“checkpoints,” and script completion in particular!
 
 Before you begin using this tutorial, make sure you have the Pushbullet
 app (phone) and/or the Pushbullet extension (browser) set up. Go to:
-www.pushbullet.com and sign up first\!
+www.pushbullet.com and sign up first!
 
-## Ensuring RPushbullet is installed
+Ensuring RPushbullet is installed
+---------------------------------
 
 Here is a quick function I use to make sure that RPushbullet is
 installed on a computer before my script is run.
@@ -65,12 +77,13 @@ if (!is.installed("RPushbullet")){
 }
 ```
 
-## Creating an error catch function with RPushbullet
+Creating an error catch function with RPushbullet
+-------------------------------------------------
 
 Now that you are certain that your scripts will make sure `RPushbullet`
 is available, we then change the default error options in R to use
 RPushbullet to forward your errors to all your connected devices. (This
-can be reset by calling `options(error = NULL)`\!)
+can be reset by calling `options(error = NULL)`!)
 
 ``` r
 options(error = function() { 
@@ -82,8 +95,7 @@ options(error = function() {
 What this does is send you a Pushbullet notification whenever your R
 script hits an error. However, it *will not* be able to tell you if a
 power outage, inconsiderate student, or terribly-planned update stopped
-the simulation without
-    warning.
+the simulation without warning.
 
 ``` r
 library(RPushbullet)
@@ -113,14 +125,15 @@ in `"~/"`). The api key can be found by logging into your Pushbullet
 account that you created earlier, going to
 <https://www.pushbullet.com#settings>, and clicking on “Create Access
 Token”. Then, you can paste the access token in place of
-“youraccesstoken” and have your .json file created automatically\!
+“youraccesstoken” and have your .json file created automatically!
 
 Then, all you need to do (in addition to appending the code above,
 **except** the `pbSetup()` function, into your R script) is remember to
 move the .rpushbullet.json file into the home directory of the
 computer(s) you’re using for your scripts.
 
-## Setting checkpoints with RPushbullet
+Setting checkpoints with RPushbullet
+------------------------------------
 
 This can be expanded even further. The `pbPost()` function was
 originally used to construct the error catch function before. The
@@ -140,11 +153,11 @@ further, the lack of a checkpoint notification can give you a hint that
 something happened to the computer itself (rather than the R code); if
 you have a idea of how long each checkpoint should take, and it’s been a
 while since the last checkpoint was reached, you may need to rush down
-to the lab and see what’s going on\!
+to the lab and see what’s going on!
 
 Here’s a further example you can try. We can use the `Sys.sleep()`
 function to put R “on hold” for a specified number of seconds; using a
-few of these in a row provides an easy test of your RPushbullet setup\!
+few of these in a row provides an easy test of your RPushbullet setup!
 
 ``` r
 library(RPushbullet)
@@ -161,16 +174,18 @@ If everything is working appropriately, you should receive three
 notifications over 2 minutes and 45 seconds from Pushbullet to all of
 your connected devices. You should be able to see how helpful this can
 be when you’re trying to monitor multiple computers and simulation
-conditions simultaneously\!
+conditions simultaneously!
 
-## Conclusion
+Conclusion
+----------
 
 If you need any more detailed help, look at the `RPushbullet` help files
 and the package author’s page:
 <https://github.com/eddelbuettel/rpushbullet>. You can also email me or
-post a message on the issues page of this Github repository\!
+post a message on the issues page of this Github repository!
 
-# Copy of Code to Include in the Beginning of your R Scripts
+Copy of Code to Include in the Beginning of your R Scripts
+==========================================================
 
 ``` r
 is.installed <- function(mypkg){
