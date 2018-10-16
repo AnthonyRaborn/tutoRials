@@ -40,7 +40,7 @@ My solution? Use the [Pushbullet app](www.pushbullet.com) in conjunction
 with the [RPushbullet
 package](https://github.com/eddelbuettel/rpushbullet) to let my scripts
 “ping” me on all my devices for certain milestones in my
-scripts–errors, “checkpoints,” and script completion in particulary\!
+scripts–errors, “checkpoints,” and script completion in particular\!
 
 Before you begin using this tutorial, make sure you have the Pushbullet
 app (phone) and/or the Pushbullet extension (browser) set up. Go to:
@@ -168,7 +168,7 @@ conditions simultaneously\!
 If you need any more detailed help, look at the `RPushbullet` help files
 and the package author’s page:
 <https://github.com/eddelbuettel/rpushbullet>. You can also email me or
-post a message on the issues page of this Github respository\!
+post a message on the issues page of this Github repository\!
 
 # Copy of Code to Include in the Beginning of your R Scripts
 

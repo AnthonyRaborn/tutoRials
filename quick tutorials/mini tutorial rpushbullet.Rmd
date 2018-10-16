@@ -17,7 +17,7 @@ R, however, is a little fickle at times. If it encounters an `Error` in the scri
 
 In addition, other users or processes may come in at any time and somehow turn off your script--particularly when you're using Windows computers and they decide they *need* to update **RIGHT NOW** regardless of what else is going on. Unless you've been particularly careful with your simulation, this can cause you to lose out on a lot of processing time from something entirely outside of your R code.
 
-My solution? Use the [Pushbullet app](www.pushbullet.com) in conjunction with the [RPushbullet package](https://github.com/eddelbuettel/rpushbullet) to let my scripts "ping" me on all my devices for certain milestones in my scripts--errors, "checkpoints," and script completion in particulary!
+My solution? Use the [Pushbullet app](www.pushbullet.com) in conjunction with the [RPushbullet package](https://github.com/eddelbuettel/rpushbullet) to let my scripts "ping" me on all my devices for certain milestones in my scripts--errors, "checkpoints," and script completion in particular!
 
 Before you begin using this tutorial, make sure you have the Pushbullet app (phone) and/or the Pushbullet extension (browser) set up. Go to: www.pushbullet.com and sign up first!
 
@@ -97,7 +97,7 @@ If everything is working appropriately, you should receive three notifications o
 
 ## Conclusion
 
-If you need any more detailed help, look at the `RPushbullet` help files and the package author's page: https://github.com/eddelbuettel/rpushbullet. You can also email me or post a message on the issues page of this Github respository!
+If you need any more detailed help, look at the `RPushbullet` help files and the package author's page: https://github.com/eddelbuettel/rpushbullet. You can also email me or post a message on the issues page of this Github repository!
 
 # Copy of Code to Include in the Beginning of your R Scripts
 
